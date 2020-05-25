@@ -185,7 +185,17 @@
                     <div class="col mr-2">
                       <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Revolutions Per Minute
                       </div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800">Slider and text</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">
+                        <input
+                          style="width: 80%"
+                          type="range"
+                          min="0"
+                          max="7000"
+                          step="1"
+                          value="300"
+                        >
+                        <h2>2000</h2>
+                      </div>
                     </div>
                     <div class="col-auto">
                       <i class="fas fa-fw fa-tachometer-alt fa-2x text-gray-300"></i>
@@ -201,7 +211,17 @@
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
                       <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Miles Per Hour</div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800">Slider and text</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">
+                        <input
+                          style="width: 80%"
+                          type="range"
+                          min="0"
+                          max="140"
+                          step="1"
+                          value="10"
+                        >
+                        <h2>40</h2>
+                      </div>
                     </div>
                     <div class="col-auto">
                       <i class="fas fa-fw fa-tachometer-alt fa-2x text-gray-300"></i>
@@ -460,6 +480,7 @@
 
   <!-- Core plugin JavaScript-->
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.3.3/rangeslider.min.js"></script>
 
   <!-- Custom scripts for all pages-->
   <script src="js/sb-admin-2.min.js"></script>
