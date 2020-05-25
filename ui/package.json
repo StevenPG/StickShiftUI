@@ -1,40 +1,51 @@
 {
-  "name": "vue-black-dashboard",
-  "version": "1.0.0",
-  "private": true,
-  "description": "A sample admin dashboard based on black dashboard UI template",
-  "author": "cristian.jora <joracristi@gmail.com>",
-  "scripts": {
-    "serve": "vue-cli-service serve --open",
-    "build": "vue-cli-service build",
-    "e2e": "node test/e2e/runner.js",
-    "lint": "vue-cli-service lint",
-    "dev": "vue-cli-service serve --open",
-    "lint-fix": "vue-cli-service lint --fix"
-  },
-  "dependencies": {
-    "chart.js": "^2.7.3",
-    "register-service-worker": "^1.5.2",
-    "vue": "^2.6.6",
-    "vue-chartjs": "^3.4.0",
-    "vue-i18n": "^8.8.1",
-    "vue-router": "^3.0.2",
-    "vue-router-prefetch": "^1.4.0",
-    "vue2-transitions": "^0.2.3"
-  },
-  "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.4.0",
-    "@vue/cli-plugin-eslint": "^3.4.0",
-    "@vue/cli-plugin-pwa": "^3.4.0",
-    "@vue/cli-service": "^3.4.0",
-    "node-sass": "^4.11.0",
-    "sass-loader": "^7.1.0",
-    "vue-cli-plugin-i18n": "^0.5.1",
-    "vue-template-compiler": "^2.6.6"
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not ie <= 11"
-  ]
+    "title": "StickShift UI",
+    "name": "stickshiftui",
+    "version": "0.0.1",
+    "scripts": {
+        "start": "node_modules/.bin/gulp watch"
+    },
+    "description": "UI for manual transmission enthusiasts to learn more about their vehicles.",
+    "keywords": [
+        "css",
+        "sass",
+        "html",
+        "responsive",
+        "theme",
+        "template",
+        "admin",
+        "app"
+    ],
+    "homepage": "https://github.com/StevenPG/StickShiftUI",
+    "license": "MIT",
+    "author": "https://github.com/StevenPG",
+    "contributors": [
+        "David Miller (http://davidmiller.io/) - Original Template",
+        "https://github.com/StevenPG"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/StevenPG/StickShiftUI"
+    },
+    "dependencies": {
+        "@fortawesome/fontawesome-free": "5.10.2",
+        "bootstrap": "4.3.1",
+        "chart.js": "2.8.0",
+        "datatables.net-bs4": "1.10.19",
+        "jquery": "3.4.1",
+        "jquery.easing": "^1.4.1"
+    },
+    "devDependencies": {
+        "browser-sync": "2.26.7",
+        "del": "5.1.0",
+        "gulp": "4.0.2",
+        "gulp-autoprefixer": "7.0.0",
+        "gulp-clean-css": "4.2.0",
+        "gulp-header": "2.0.9",
+        "gulp-plumber": "^1.2.1",
+        "gulp-rename": "1.4.0",
+        "gulp-sass": "4.0.2",
+        "gulp-uglify": "3.0.2",
+        "merge-stream": "2.0.0"
+    }
 }
