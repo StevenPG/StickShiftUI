@@ -187,8 +187,7 @@
                       <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Revolutions Per Minute
                       </div>
                       <div class="h5 mb-0 font-weight-bold text-gray-800">
-                        <input style="width: 80%" type="range" min="0" max="7000" step="1" value="2000"
-                          oninput="onRPMSlide(this.value)">
+                        <input style="width: 80%" id="RPMSlider" oninput="RPMChangeCalculation()" type="range" min="0" max="7000" step="1" value="2000">
                         <h2 id="RPMLabel">2000</h2>
                       </div>
                     </div>
@@ -207,8 +206,7 @@
                     <div class="col mr-2">
                       <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Miles Per Hour</div>
                       <div class="h5 mb-0 font-weight-bold text-gray-800">
-                        <input style="width: 80%" type="range" min="0" max="140" step="1" value="10"
-                          oninput="onMPHSlide(this.value)">
+                        <input style="width: 80%" id="MPHSlider" oninput="MPHChangeCalculation()" type="range" min="0" max="140" step="1" value="10">
                         <h2 id="MPHLabel">20</h2>
                       </div>
                     </div>
@@ -255,10 +253,9 @@
                                 aria-label="Radio button for following text input">
                             </div>
                           </div>
-                          <input type="text" class="form-control" placeholder="First Gear Ratio"
-                            aria-label="Recipient's username" aria-describedby="basic-addon2">
+                          <input type="text" class="form-control" id="firstgear" placeholder="First Gear Ratio">
                           <div class="input-group-append">
-                            <span class="input-group-text" id="basic-addon2">: 1</span>
+                            <span class="input-group-text">: 1</span>
                           </div>
                         </div>
                         <div class="input-group mb-3">
@@ -268,10 +265,9 @@
                                 aria-label="Radio button for following text input">
                             </div>
                           </div>
-                          <input type="text" class="form-control" placeholder="Second Gear Ratio"
-                            aria-label="Recipient's username" aria-describedby="basic-addon2">
+                          <input type="text" class="form-control" id="secondgear" placeholder="Second Gear Ratio">
                           <div class="input-group-append">
-                            <span class="input-group-text" id="basic-addon2">: 1</span>
+                            <span class="input-group-text">: 1</span>
                           </div>
                         </div>
                         <div class="input-group mb-3">
@@ -281,10 +277,9 @@
                                 aria-label="Radio button for following text input">
                             </div>
                           </div>
-                          <input type="text" class="form-control" placeholder="Third Gear Ratio"
-                            aria-label="Recipient's username" aria-describedby="basic-addon2">
+                          <input type="text" class="form-control" id="thirdgear" placeholder="Third Gear Ratio">
                           <div class="input-group-append">
-                            <span class="input-group-text" id="basic-addon2">: 1</span>
+                            <span class="input-group-text">: 1</span>
                           </div>
                         </div>
                         <div class="input-group mb-3">
@@ -294,10 +289,9 @@
                                 aria-label="Radio button for following text input">
                             </div>
                           </div>
-                          <input type="text" class="form-control" placeholder="Fourth Gear Ratio"
-                            aria-label="Recipient's username" aria-describedby="basic-addon2">
+                          <input type="text" class="form-control"  id="fourthgear" placeholder="Fourth Gear Ratio">
                           <div class="input-group-append">
-                            <span class="input-group-text" id="basic-addon2">: 1</span>
+                            <span class="input-group-text">: 1</span>
                           </div>
                         </div>
                         <div class="input-group mb-3">
@@ -307,10 +301,9 @@
                                 aria-label="Radio button for following text input">
                             </div>
                           </div>
-                          <input type="text" class="form-control" placeholder="Fifth Gear Ratio"
-                            aria-label="Recipient's username" aria-describedby="basic-addon2">
+                          <input type="text" class="form-control" id="fifthgear" placeholder="Fifth Gear Ratio">
                           <div class="input-group-append">
-                            <span class="input-group-text" id="basic-addon2">: 1</span>
+                            <span class="input-group-text">: 1</span>
                           </div>
                         </div>
                         <div class="input-group mb-3">
@@ -320,10 +313,9 @@
                                 aria-label="Radio button for following text input">
                             </div>
                           </div>
-                          <input type="text" class="form-control" placeholder="Sixth Gear Ratio"
-                            aria-label="Recipient's username" aria-describedby="basic-addon2">
+                          <input type="text" class="form-control" id="sixthgear" placeholder="Sixth Gear Ratio">
                           <div class="input-group-append">
-                            <span class="input-group-text" id="basic-addon2">: 1</span>
+                            <span class="input-group-text">: 1</span>
                           </div>
                         </div>
                       </div>
@@ -344,16 +336,14 @@
                       <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Vehicle Details</div>
                       <div class="h5 mb-0 font-weight-bold text-gray-800">
                         <div class="input-group mb-3">
-                          <input type="text" class="form-control" placeholder="Final Drive Ratio"
-                            aria-label="Recipient's username" aria-describedby="basic-addon2">
+                          <input type="text" class="form-control" id="finaldrive" placeholder="Final Drive Ratio">
                           <div class="input-group-append">
                             <span class="input-group-text" id="basic-addon2">: 1</span>
                           </div>
                         </div>
                         <hr>
                         <div class="input-group mb-3">
-                          <input type="text" id="tireDiameter" class="form-control" placeholder="Tire Diameter"
-                            aria-label="Recipient's username" aria-describedby="basic-addon2">
+                          <input type="text" id="tireDiameter" class="form-control" placeholder="Tire Diameter">
                           <div class="input-group-append">
                             <span class="input-group-text" id="basic-addon2"> Inches</span>
                           </div>
