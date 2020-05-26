@@ -48,13 +48,30 @@ function calculateTireDiameter() {
  * Get the currently selected gear
  */
 function selectedGearRatio() {
-  var first = document.getElementById("firstgear").value;
-  var second = document.getElementById("secondgear").value;
-  var third = document.getElementById("thirdgear").value;
-  var fourth = document.getElementById("fourthgear").value;
-  var fifth = document.getElementById("fifthgear").value;
-  var sixth = document.getElementById("sixthgear").value;
-  return first;
+  var gearSelection = document.getElementsByName("selectedGear")
+  
+  for(var i = 0; i < gearSelection.length; i++){
+    if(gearSelection[i].checked){
+      var selectedGear = parseInt(i) + 1
+
+      if(selectedGear == 1){
+        return document.getElementById("firstgear").value;
+      } else if(selectedGear == 2){
+        return document.getElementById("secondgear").value;
+      } else if(selectedGear == 3){
+        return document.getElementById("thirdgear").value;
+      } else if(selectedGear == 4){
+        return document.getElementById("fourthgear").value;
+      } else if(selectedGear == 5){
+        return document.getElementById("fifthgear").value;
+      } else if(selectedGear == 6){
+        return document.getElementById("sixthgear").value;
+      }
+      return gearSelection[i].value 
+    }
+  }
+  // One of them must be checked (by the law of radio buttons)
+  // this should not be reachable
 }
 
 /**
