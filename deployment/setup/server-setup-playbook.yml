@@ -1,3 +1,28 @@
 - hosts: localhost
   roles:
     - geerlingguy.docker
+
+  tasks:
+    - name: ensure nginx is installed and latest
+      apt: name=nginx state=latest
+    - name: start nginx
+      service:
+        name: nginx
+        state: started
+
+    - name: Run StickShiftUI Docker Image
+      docker_container:
+        name: stickshiftui
+        image: sgantz/stickshiftui:0.1.0
+        ports:
+        - "8080:80"
+        state: started
+
+    - name: deploy nginx configuration for local reverse proxy
+    - name: stat ./nginx-local-reverse-proxy.conf
+      stat: path=./nginx-local-reverse-proxy.conf
+      register: conf_present
+
+    - name: Move local reverse proxy config to nginx
+      command: cp -f ./nginx-local-reverse-proxy.conf /etc/nginx/sites-available/default
+      when: conf_present.stat.exists
