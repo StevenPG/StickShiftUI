@@ -3,7 +3,7 @@ mkdir -p /deployment
 # pull source
 git clone https://github.com/StevenPG/StickShiftUI.git /deployment
 # compile
-cd /deployment && npm install
+cd /deployment/ui && npm install
 mkdir -p /deployment/dist
 cp -rf /deployment/ui/index.html /deployment/dist
 cp -rf /deployment/ui/js /deployment/dist
@@ -16,5 +16,5 @@ cp -rf /deployment/ui/usefulresources.html /deployment/dist
 # delete files in nginx folder
 rm -rf /var/www/html/*
 # move results of compilation into nginx folder
-mv /deployment/dist/* /var/www/html/*
+mv /deployment/ui/dist/* /var/www/html/*
 
