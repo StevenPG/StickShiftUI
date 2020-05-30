@@ -18,8 +18,7 @@
         - "8080:80"
         state: started
 
-    - name: deploy nginx configuration for local reverse proxy
-    - name: stat ./nginx-local-reverse-proxy.conf
+    - name: check nginx configuration for local reverse proxy
       stat: path=./nginx-local-reverse-proxy.conf
       register: conf_present
 
