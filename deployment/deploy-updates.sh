@@ -17,5 +17,5 @@ cp -rf /deployment/ui/usefulresources.html /deployment/dist
 # delete files in nginx folder
 rm -rf /var/www/html/*
 # move results of compilation into nginx folder
-mv /deployment/dist/* /var/www/html/*
+cp -rf /deployment/dist/* /var/www/html/
 
