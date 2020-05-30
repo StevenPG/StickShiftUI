@@ -1,4 +1,5 @@
 # create staging directory
+rm -rf /deployment
 mkdir -p /deployment
 # pull source
 git clone https://github.com/StevenPG/StickShiftUI.git /deployment
