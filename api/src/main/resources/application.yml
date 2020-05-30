@@ -1,0 +1,12 @@
+server:
+    port: 8080
+---
+spring.profiles: local
+spring:
+    devtools:
+        add-properties: true
+---
+spring.profiles: prod
+spring:
+    devtools:
+        add-properties: false
