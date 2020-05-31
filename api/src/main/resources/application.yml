@@ -3,6 +3,11 @@ server:
 ---
 spring.profiles: local
 spring:
+    datasource:
+        name: vehicles
+        driverClassName: org.h2.Driver
+        initialize: false
+        url: jdbc:h2:mem:vehicles
     devtools:
         add-properties: true
 ---
