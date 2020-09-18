@@ -17,6 +17,11 @@
     fillCalculator(4.30, 24.6, 3.63, 2.19, 1.54, 1.21, 1.00, 0.77)
  }
 
+ function autoFill2018VWGolfR() {
+   console.log("Temporary -> Auto-filling 2018 Volkswagen Golf R")
+   fillCalculator(4.24, 25.48, 3.36, 2.09, 1.48, 1.09, 1.1, 0.91)
+}
+
  function fillCalculator(finalDrive, tireDiameter, first, second, third, fourth, fifth, sixth){
     document.getElementById("firstgear").value = first;
     document.getElementById("secondgear").value = second;
